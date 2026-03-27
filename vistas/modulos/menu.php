@@ -104,7 +104,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="puntuacion" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Puntuación</p>
                 </a>
