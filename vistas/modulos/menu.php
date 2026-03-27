@@ -50,7 +50,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="Usuarios" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Usuarios</p>
                 </a>
@@ -97,7 +97,7 @@
             
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="verificacion" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Verificación</p>
                 </a>
