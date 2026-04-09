@@ -66,6 +66,7 @@
           $_GET["ruta"] == "puntuacion" ||
           $_GET["ruta"] == "apoyos" ||
           $_GET["ruta"] == "sedes" ||
+          $_GET["ruta"] == "fichas" ||
           $_GET["ruta"] == "identificacion"|| 
           $_GET["ruta"] == "financiera"
         ) {
