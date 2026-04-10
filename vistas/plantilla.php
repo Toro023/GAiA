@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="vistas/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">    
 
     <!-- ************************************************************ -->
-
+    
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
     <script src="vistas/plugins/jquery/jquery.min.js"></script>
@@ -45,16 +45,7 @@
     <script src="vistas/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="vistas/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="vistas/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-
-
-
-
-
-
-
-    <!-- AdminLTE App -->
-    <script src="vistas/dist/js/adminlte.js"></script>
-
+    
     <!-- PAGE PLUGINS -->
     <!-- jQuery Mapael -->
     <script src="vistas/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
@@ -63,13 +54,15 @@
     <script src="vistas/plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <!-- ChartJS -->
     <script src="vistas/plugins/chart.js/Chart.min.js"></script>
-
-    <!-- AdminLTE for demo purposes -->
-    <!-- <script src="vistas/dist/js/demo.js"></script> -->
+    
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="vistas/dist/js/pages/dashboard2.js"></script>
-
-
+    
+    <!-- AdminLTE App -->
+    <script src="vistas/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <!-- <script src="vistas/dist/js/demo.js"></script> -->
+    
 
   </head>
 
