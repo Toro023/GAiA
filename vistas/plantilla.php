@@ -64,6 +64,9 @@
     <!-- <script src="vistas/dist/js/demo.js"></script> -->
     
 
+    <!-- Css especifico de Financiera -->
+    <link rel="stylesheet" href="vistas/css/financiera.css">
+
   </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -113,8 +116,7 @@
 
 
   <script src="vistas/js/plantilla.js"></script>  
-
-
+  <script src="vistas/js/financiera.js"></script>
 
 </body>
 
