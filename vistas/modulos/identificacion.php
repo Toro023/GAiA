@@ -108,7 +108,9 @@
           </div>
 
         </div>
+        
       </div>
+
 
       <!-- Modales eliminados a favor de botones expandibles en las tarjetas -->
 
