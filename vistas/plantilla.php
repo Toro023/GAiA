@@ -69,7 +69,8 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="vistas/dist/js/pages/dashboard2.js"></script>
 
-
+    <!-- Css especifico de Financiera -->
+    <link rel="stylesheet" href="vistas/css/financiera.css">
 
   </head>
 
@@ -120,8 +121,7 @@
 
 
   <script src="vistas/js/plantilla.js"></script>  
-
-
+  <script src="vistas/js/financiera.js"></script>
 
 </body>
 
