@@ -19,16 +19,16 @@
 
 <!-- Main content -->
 <section class="content">
+  <link rel="stylesheet" href="inscripciones.css/styles.css">
 
   <!-- Botones superiores -->
   <div class="row mb-4">
     <div class="col-md-6 mb-2">
-      <button class="btn btn-primary btn-block" style="border-radius: 5px; font-weight: 500;" data-toggle="modal"
+      <button class="btn btn-primary btn-block custom-btn-rounded" data-toggle="modal"
         data-target="#modalDatosPersonales">Inscripción a apoyos</button>
     </div>
     <div class="col-md-6 mb-2">
-      <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalPreguntas"
-        style="border-radius: 5px; font-weight: 500;">Preguntas Frecuentes</button>
+      <button class="btn btn-primary btn-block custom-btn-rounded" data-toggle="modal" data-target="#modalPreguntas">Preguntas Frecuentes</button>
     </div>
   </div>
 
@@ -53,20 +53,19 @@
               <?php echo $categoria; ?> <span class="text-muted text-sm">| 20/100</span>
             </h5>
             <div class="table-responsive">
-              <table class="table table-sm table-dark table-bordered table-striped text-center m-0"
-                style="min-width: 900px;">
+              <table class="table table-sm table-dark table-bordered table-striped text-center m-0 inscripciones-table">
                 <thead class="bg-success text-white">
                   <tr>
-                    <th class="align-middle" style="width: 10%;">AUTORIZACION<br>DE MENOR</th>
-                    <th class="align-middle" style="width: 10%;">DISCAPACIDAD</th>
-                    <th class="align-middle" style="width: 10%;">COMUNIDAD<br>ETNICA</th>
-                    <th class="align-middle" style="width: 10%;">CAMPESINO</th>
-                    <th class="align-middle" style="width: 10%;">CABEZA<br>DE FAMILIA</th>
-                    <th class="align-middle" style="width: 10%;">VICTIMA<br>DE CONFLICTO</th>
-                    <th class="align-middle" style="width: 10%;">VIOLENCIA<br>DE GENERO</th>
-                    <th class="align-middle" style="width: 10%;">EMBARAZADA<br>/LACTANCIA</th>
-                    <th class="align-middle" style="width: 10%;">SISBEN<br>A/B</th>
-                    <th class="align-middle" style="width: 10%;">DESPLAZADO<br>NATURAL</th>
+                    <th class="align-middle w-10">AUTORIZACION<br>DE MENOR</th>
+                    <th class="align-middle w-10">DISCAPACIDAD</th>
+                    <th class="align-middle w-10">COMUNIDAD<br>ETNICA</th>
+                    <th class="align-middle w-10">CAMPESINO</th>
+                    <th class="align-middle w-10">CABEZA<br>DE FAMILIA</th>
+                    <th class="align-middle w-10">VICTIMA<br>DE CONFLICTO</th>
+                    <th class="align-middle w-10">VIOLENCIA<br>DE GENERO</th>
+                    <th class="align-middle w-10">EMBARAZADA<br>/LACTANCIA</th>
+                    <th class="align-middle w-10">SISBEN<br>A/B</th>
+                    <th class="align-middle w-10">DESPLAZADO<br>NATURAL</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -109,7 +108,7 @@
       <!-- /VISTA USUARIO -->
 
       <!-- VISTA ADMINISTRADOR -->
-      <div id="vistaAdmin" style="display: none;">
+      <div id="vistaAdmin" class="d-none">
         <div class="row align-items-center mb-4">
           <div class="col-md-8">
             <ul class="nav nav-pills" id="adminTabs" role="tablist">
@@ -160,7 +159,7 @@
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Ficha</th>
-                    <th style="width: 15%;">Estado</th>
+                    <th class="w-15">Estado</th>
                     <th>Fecha De Inscripcion</th>
                   </tr>
                 </thead>
@@ -200,7 +199,7 @@
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Ficha</th>
-                    <th style="width: 15%;">Estado</th>
+                    <th class="w-15">Estado</th>
                     <th>Fecha De Inscripcion</th>
                   </tr>
                 </thead>
@@ -238,7 +237,7 @@
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Ficha</th>
-                    <th style="width: 15%;">Estado</th>
+                    <th class="w-15">Estado</th>
                     <th>Fecha De Inscripcion</th>
                   </tr>
                 </thead>
@@ -276,7 +275,7 @@
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Ficha</th>
-                    <th style="width: 15%;">Estado</th>
+                    <th class="w-15">Estado</th>
                     <th>Fecha De Inscripcion</th>
                   </tr>
                 </thead>
@@ -312,13 +311,6 @@
       <button id="btnSubirDocumento" class="btn btn-primary px-4" data-toggle="modal" data-target="#modalInfoBancaria">
         <i class="fas fa-file-upload mr-2"></i> Subir documento de certificación bancaria
       </button>
-      <div class="position-absolute" style="right: 20px;">
-        <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="switchVistaAdmin">
-          <label class="custom-control-label" for="switchVistaAdmin" style="cursor: pointer;"
-            title="Cambiar a vista de administrador"></label>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -329,75 +321,66 @@
       <div class="modal-content bg-dark text-light">
         <div class="modal-header bg-primary p-3 border-0">
           <div class="d-flex align-items-center w-100">
-            <i class="fas fa-address-card fa-lg ml-2 mr-3" style="color: white !important;"></i>
-            <h5 class="modal-title font-weight-bold mb-0 text-uppercase mx-auto" id="modalInfoBancariaTitle"
-              style="font-size: 1.1rem; letter-spacing: 0.5px; color: white !important;">
+            <i class="fas fa-address-card fa-lg ml-2 mr-3 text-white-important"></i>
+            <h5 class="modal-title font-weight-bold mb-0 text-uppercase mx-auto modal-title-sm text-white-important" id="modalInfoBancariaTitle">
               ADICCIONAR INFORMACION BANCARIA
             </h5>
-            <button type="button" class="close text-white ml-0" style="opacity: 1; text-shadow: none;"
+            <button type="button" class="close text-white ml-0 close-no-shadow"
               data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" style="color: white !important;">&times;</span>
+              <span aria-hidden="true" class="text-white-important">&times;</span>
             </button>
           </div>
         </div>
         <div class="modal-body p-4">
-          <div style="border: 1px dashed #6c757d; padding: 25px 20px; border-radius: 5px;">
+          <div class="box-dashed">
             <div class="form-group mb-4">
-              <label for="numeroCuenta" style="font-weight: normal; margin-bottom: 5px;">numero de cuenta</label>
+              <label for="numeroCuenta" class="form-label-normal">numero de cuenta</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                  <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                       class="far fa-dot-circle"></i></span>
                 </div>
-                <input type="text" class="form-control bg-transparent" id="numeroCuenta"
-                  style="border-left: none; box-shadow: none;">
+                <input type="text" class="form-control bg-transparent form-control-no-border-left" id="numeroCuenta">
               </div>
             </div>
             <div class="form-group mb-4">
-              <label for="nombreBanco" style="font-weight: normal; margin-bottom: 5px;">nombre del banco</label>
+              <label for="nombreBanco" class="form-label-normal">nombre del banco</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                  <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                       class="fas fa-file-invoice"></i></span>
                 </div>
-                <input type="text" class="form-control bg-transparent" id="nombreBanco"
-                  style="border-left: none; box-shadow: none;">
+                <input type="text" class="form-control bg-transparent form-control-no-border-left" id="nombreBanco">
               </div>
             </div>
-            <button type="button" class="btn btn-primary shadow-sm" id="btnAbrirSubirArchivo"
-              style="background-color: #007bff; border-color: #007bff; border-radius: 20px; padding: 6px 20px;">
+            <button type="button" class="btn btn-primary shadow-sm btn-upload" id="btnAbrirSubirArchivo">
               <i class="fas fa-upload mr-1"></i> Subir archivo
             </button>
           </div>
         </div>
         <div class="modal-footer border-0 pt-0 pb-4 pr-4">
-          <button type="button" class="btn btn-primary" data-dismiss="modal"
-            style="background-color: #007bff; border-color: #007bff; border-radius: 10px; padding: 8px 25px;">Aceptar</button>
+          <button type="button" class="btn btn-primary btn-upload-square" data-dismiss="modal">Aceptar</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Modal Subir Archivo -->
-  <div class="modal fade" id="modalSubirArchivo" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade modal-high-z" id="modalSubirArchivo" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content text-center" style="border-radius: 10px; min-height: 350px;">
-        <button type="button" class="close position-absolute" style="right: 15px; top: 15px; z-index: 10;"
-          data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" style="font-size: 1.5rem;">&times;</span>
+      <div class="modal-content bg-dark text-light text-center modal-rounded modal-content-centered modal-content-dark">
+        <button type="button" class="close position-absolute modal-close-top-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="text-white modal-close-icon">&times;</span>
         </button>
-        <div class="modal-body d-flex flex-column justify-content-center align-items-center"
-          style="padding: 40px 20px;">
+        <div class="modal-body d-flex flex-column justify-content-center align-items-center modal-body-upload">
           <div class="mb-4">
-            <i class="fas fa-upload" style="font-size: 4rem; display: block; margin-bottom: 5px;"></i>
+            <i class="fas fa-upload icon-large"></i>
           </div>
-          <p class="mb-5" style="font-size: 1.1rem;">Arrastra aqui el archivo o buscar en el dispositivo</p>
-          <div class="d-flex justify-content-center flex-wrap" style="gap: 15px;">
-            <button type="button" class="btn btn-primary px-4 py-2"
-              style="background-color: #007bff; border-color: #007bff; border-radius: 10px;">Buscar en el
+          <p class="mb-5 upload-description">Arrastra aqui el archivo o buscar en el dispositivo</p>
+          <div class="d-flex justify-content-center flex-wrap upload-action-group">
+            <button type="button" class="btn btn-primary px-4 py-2 btn-upload-square">Buscar en el
               dispositivo</button>
-            <button type="button" class="btn btn-primary px-4 py-2"
-              style="background-color: #007bff; border-color: #007bff; border-radius: 10px;">Enviar documento</button>
+            <button type="button" class="btn btn-primary px-4 py-2 btn-upload-square">Enviar documento</button>
           </div>
         </div>
       </div>
@@ -452,18 +435,17 @@
 
   <div class="modal fade" id="modalPreguntas" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content bg-dark text-light" style="border-radius: 10px; overflow: hidden;">
+      <div class="modal-content bg-dark text-light modal-rounded overflow-hidden">
         <div class="modal-header bg-primary d-flex justify-content-between align-items-center border-0">
           <div>
-            <i class="fas fa-user-graduate" style="font-size: 1.5rem;"></i>
+            <i class="fas fa-user-graduate icon-notification"></i>
           </div>
-          <h5 class="modal-title font-weight-bold" style="flex-grow: 1; text-align: center;">PREGUNTAS FRECUENTES</h5>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"
-            style="opacity: 1; outline: none;">
+          <h5 class="modal-title font-weight-bold modal-title-sm text-center flex-grow-1">PREGUNTAS FRECUENTES</h5>
+          <button type="button" class="close text-white close-no-shadow" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" style="padding: 20px 40px; max-height: 70vh; overflow-y: auto;">
+        <div class="modal-body modal-faq-body">
 
           <div class="accordion" id="accordionPreguntas">
             <?php foreach ($preguntas as $index => $pregunta):
@@ -472,24 +454,21 @@
               $expanded = $index === 0 ? "true" : "false";
               $collapseClass = $index === 0 ? "collapse show" : "collapse";
               ?>
-              <div class="card shadow-none mb-3"
-                style="border: 1px solid rgba(128,128,128,0.3); border-radius: 8px; background-color: transparent;">
-                <div class="card-header p-0" id="<?php echo $headingId; ?>"
-                  style="background-color: transparent; border-bottom: none; border-radius: 8px;">
+              <div class="card shadow-none mb-3 faq-card">
+                <div class="card-header p-0 faq-card-header" id="<?php echo $headingId; ?>">
                   <h2 class="mb-0">
                     <button
-                      class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center text-decoration-none text-reset <?php echo $index === 0 ? '' : 'collapsed'; ?>"
+                      class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center text-decoration-none text-reset faq-collapse-btn <?php echo $index === 0 ? '' : 'collapsed'; ?>"
                       type="button" data-toggle="collapse" data-target="#<?php echo $collapseId; ?>"
-                      aria-expanded="<?php echo $expanded; ?>" aria-controls="<?php echo $collapseId; ?>"
-                      style="box-shadow: none;">
+                      aria-expanded="<?php echo $expanded; ?>" aria-controls="<?php echo $collapseId; ?>">
                       <?php echo $pregunta['titulo']; ?>
-                      <i class="fas fa-chevron-down text-muted" style="font-size: 0.8rem;"></i>
+                      <i class="fas fa-chevron-down text-muted icon-small"></i>
                     </button>
                   </h2>
                 </div>
                 <div id="<?php echo $collapseId; ?>" class="<?php echo $collapseClass; ?>"
                   aria-labelledby="<?php echo $headingId; ?>" data-parent="#accordionPreguntas">
-                  <div class="card-body pt-0 text-muted" style="background-color: transparent;">
+                  <div class="card-body pt-0 text-muted card-body-transparent">
                     <?php echo $pregunta['respuesta']; ?>
                   </div>
                 </div>
@@ -510,14 +489,13 @@
     <div class="modal-content bg-dark text-light">
       <div class="modal-header bg-primary p-3 border-0">
         <div class="d-flex align-items-center w-100">
-          <i class="fas fa-graduation-cap fa-lg ml-2 mr-3" style="color: white !important;"></i>
-          <h5 class="modal-title font-weight-bold mb-0 text-uppercase mx-auto" id="pdModalTitle"
-            style="font-size: 1.1rem; letter-spacing: 0.5px; color: white !important;">
+          <i class="fas fa-graduation-cap fa-lg ml-2 mr-3 text-white-important"></i>
+          <h5 class="modal-title font-weight-bold mb-0 text-uppercase mx-auto modal-title-sm text-white-important" id="pdModalTitle">
             DATOS PERSONALES DEL APRENDIZ
           </h5>
-          <button type="button" class="close text-white ml-0" style="opacity: 1; text-shadow: none;"
+          <button type="button" class="close text-white ml-0 close-no-shadow"
             data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" style="color: white !important;">&times;</span>
+            <span aria-hidden="true" class="text-white-important">&times;</span>
           </button>
         </div>
       </div>
@@ -525,153 +503,146 @@
 
         <!-- Contenedor del paso 1 -->
         <div id="pd-step-1" class="pd-step">
-          <!-- Box 1 -->
-          <div style="border: 1px dashed #6c757d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+          <div class="box-dashed">
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Nombre completo</label>
+                <label class="form-label-normal">Nombre completo</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Apellidos</label>
+                <label class="form-label-normal">Apellidos</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-3 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Tipo de documento"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Tipo de documento">
               </div>
               <div class="col-md-4 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Numero identificación"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Numero identificación">
               </div>
               <div class="col-md-3 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Género"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Género">
               </div>
               <div class="col-md-2 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Edad"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Edad">
               </div>
             </div>
           </div>
 
-          <!-- Box 2 -->
-          <div style="border: 1px dashed #6c757d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+          <div class="box-dashed">
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Departamento residencia</label>
+                <label class="form-label-normal">Departamento residencia</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Municipio de residencia</label>
+                <label class="form-label-normal">Municipio de residencia</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Dirección</label>
+                <label class="form-label-normal">Dirección</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Numero contacto</label>
+                <label class="form-label-normal">Numero contacto</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-phone-alt"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-0 flex-column d-flex align-items-center">
-                <label style="font-weight: normal; margin-bottom: 5px;">Correo electronico</label>
+                <label class="form-label-normal">Correo electronico</label>
                 <div class="input-group w-100">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-envelope"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Box 3 -->
-          <div style="border: 1px dashed #6c757d; padding: 15px; border-radius: 5px;">
+          <div class="box-dashed">
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Nombre contacto</label>
+                <label class="form-label-normal">Nombre contacto</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Número contacto</label>
+                <label class="form-label-normal">Número contacto</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-phone-alt"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 form-group mb-0">
-                <label style="font-weight: normal; margin-bottom: 5px;">Grupo SISBEN</label>
+                <label class="form-label-normal">Grupo SISBEN</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-users"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-0">
-                <label style="font-weight: normal; margin-bottom: 5px;">Nivel SISBEN</label>
+                <label class="form-label-normal">Nivel SISBEN</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-layer-group"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
@@ -679,214 +650,207 @@
         </div>
 
         <!-- Contenedor del paso 2 -->
-        <div id="pd-step-2" class="pd-step" style="display: none;">
-          <div
-            style="border: 1px dashed #6c757d; padding: 25px 20px; border-radius: 5px; min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <p class="mb-2" style="font-size: 1.1rem;">Centro Latinoamericano De Especies Menores</p>
+        <div id="pd-step-2" class="pd-step">
+          <div class="box-dashed-large">
+            <p class="mb-2 text-large">Centro Latinoamericano De Especies Menores</p>
             <p class="mb-4">seleccione la sede a la que pertenece</p>
-            <select class="form-control mb-4 bg-transparent border-dark"
-              style="box-shadow: none; border-radius: 8px; width: 60%; max-width: 350px;">
+            <select class="form-control mb-4 bg-transparent border-dark form-control-large">
               <option>Select option</option>
             </select>
-            <div style="width: 60%; max-width: 350px;">
-              <label style="font-weight: normal; margin-bottom: 5px;">numero de ficha</label>
+            <div class="form-control-large">
+              <label class="form-label-normal">numero de ficha</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text bg-transparent border-dark" style="border-right: none;"><i
+                  <span class="input-group-text bg-transparent border-dark input-group-text-no-border-right"><i
                       class="fas fa-file-alt"></i></span>
                 </div>
-                <input type="text" class="form-control bg-transparent border-dark"
-                  style="border-left: none; box-shadow: none;">
+                <input type="text" class="form-control bg-transparent border-dark form-control-no-border-left">
               </div>
             </div>
           </div>
         </div>
 
         <!-- Contenedor del paso 3 -->
-        <div id="pd-step-3" class="pd-step" style="display: none;">
-          <div style="border: 1px dashed #6c757d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        <div id="pd-step-3" class="pd-step">
+          <div class="box-dashed">
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Nombres del representante</label>
+                <label class="form-label-normal">Nombres del representante</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Apellidos del representante</label>
+                <label class="form-label-normal">Apellidos del representante</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">parentezco</label>
+                <label class="form-label-normal">parentezco</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-user-friends"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">numero de documento</label>
+                <label class="form-label-normal">numero de documento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-file-alt"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Tipo de documento"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Tipo de documento">
               </div>
               <div class="col-md-4 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Género"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Género">
               </div>
               <div class="col-md-4 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Edad"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Edad">
               </div>
             </div>
           </div>
-          <div style="border: 1px dashed #6c757d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+          <div class="box-dashed">
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Departamento residencia</label>
+                <label class="form-label-normal">Departamento residencia</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Municipio de residencia</label>
+                <label class="form-label-normal">Municipio de residencia</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-3 flex-column d-flex align-items-center">
-                <label style="font-weight: normal; margin-bottom: 5px; text-align: left; width: 100%;">Correo
-                  electronico</label>
+                <label class="form-label-normal vertical-label-full">Correo electronico</label>
                 <div class="input-group w-100">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-envelope"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-0 flex-column d-flex align-items-center">
-                <label style="font-weight: normal; margin-bottom: 5px; text-align: left; width: 100%;">Dirección</label>
+                <label class="form-label-normal vertical-label-full">Dirección</label>
                 <div class="input-group w-100">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6 form-group mb-3">
-              <label style="font-weight: normal; margin-bottom: 5px;">Número contacto</label>
+              <label class="form-label-normal">Número contacto</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                  <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                       class="fas fa-phone-alt"></i></span>
                 </div>
-                <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                <input type="text" class="form-control bg-transparent form-control-no-border-left">
               </div>
             </div>
           </div>
-          <p class="text-center mt-2 mb-0" style="color: #dc3545; font-size: 0.95rem;">*En Caso De Que El Aprendiz Sea
+          <p class="text-center mt-2 mb-0 form-warning-text">*En Caso De Que El Aprendiz Sea
             Menor De Edad El Tutor A Cargo Deberá Llenar Estos Datos*</p>
         </div>
 
         <!-- Contenedor del paso 4 -->
-        <div id="pd-step-4" class="pd-step" style="display: none;">
-          <div style="border: 1px dashed #6c757d; padding: 25px 20px; border-radius: 5px; margin-bottom: 20px;">
+        <div id="pd-step-4" class="pd-step">
+          <div class="box-dashed-large">
             <div class="row">
               <div class="col-md-6 form-group mb-4">
-                <label style="font-weight: normal; margin-bottom: 5px;">ubicación de la vivienda</label>
+                <label class="form-label-normal">ubicación de la vivienda</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-4">
-                <label style="font-weight: normal; margin-bottom: 5px;">Número de estrato</label>
+                <label class="form-label-normal">Número de estrato</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-edit"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 form-group mb-4">
-                <label style="font-weight: normal; margin-bottom: 5px;">tipo de regimen</label>
+                <label class="form-label-normal">tipo de regimen</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-hand-holding-medical"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-4">
-                <label style="font-weight: normal; margin-bottom: 5px;">EPS</label>
+                <label class="form-label-normal">EPS</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-user-md"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-0">
-                <label style="font-weight: normal; margin-bottom: 5px;">tipo de vinculación</label>
+                <label class="form-label-normal">tipo de vinculación</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
@@ -894,161 +858,153 @@
         </div>
 
         <!-- Contenedor del paso 5 (Mismo contenido del paso 3 modificado o similar para mantener la captura) -->
-        <div id="pd-step-5" class="pd-step" style="display: none;">
+        <div id="pd-step-5" class="pd-step">
           <!-- El diseño del paso 5 es casi idéntico al 3 en los campos pero dice INFORMACION SOCIOECONOMICA -->
-          <div style="border: 1px dashed #6c757d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+          <div class="box-dashed">
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Nombres del representante</label>
+                <label class="form-label-normal">Nombres del representante</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Apellidos del representante</label>
+                <label class="form-label-normal">Apellidos del representante</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">parentezco</label>
+                <label class="form-label-normal">parentezco</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-user-friends"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">numero de documento</label>
+                <label class="form-label-normal">numero de documento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-file-alt"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Tipo de documento"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Tipo de documento">
               </div>
               <div class="col-md-4 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Género"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Género">
               </div>
               <div class="col-md-4 form-group mb-0">
-                <input type="text" class="form-control bg-transparent" placeholder="Edad"
-                  style="box-shadow: none; text-align: center; border-radius: 20px;">
+                <input type="text" class="form-control bg-transparent form-control-round-centered" placeholder="Edad">
               </div>
             </div>
           </div>
-          <div style="border: 1px dashed #6c757d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+          <div class="box-dashed">
             <div class="row">
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Departamento residencia</label>
+                <label class="form-label-normal">Departamento residencia</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
               <div class="col-md-6 form-group mb-3">
-                <label style="font-weight: normal; margin-bottom: 5px;">Municipio de residencia</label>
+                <label class="form-label-normal">Municipio de residencia</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-3 flex-column d-flex align-items-center">
-                <label style="font-weight: normal; margin-bottom: 5px; text-align: left; width: 100%;">Correo
-                  electronico</label>
+                <label class="form-label-normal vertical-label-full">Correo electronico</label>
                 <div class="input-group w-100">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="far fa-envelope"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6 form-group mb-0 flex-column d-flex align-items-center">
-                <label style="font-weight: normal; margin-bottom: 5px; text-align: left; width: 100%;">Dirección</label>
+                <label class="form-label-normal vertical-label-full">Dirección</label>
                 <div class="input-group w-100">
                   <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                    <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                         class="fas fa-home"></i></span>
                   </div>
-                  <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                  <input type="text" class="form-control bg-transparent form-control-no-border-left">
                 </div>
               </div>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6 form-group mb-0">
-              <label style="font-weight: normal; margin-bottom: 5px;">Número contacto</label>
+              <label class="form-label-normal">Número contacto</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text bg-transparent" style="border-right: none;"><i
+                  <span class="input-group-text bg-transparent input-group-text-no-border-right"><i
                       class="fas fa-phone-alt"></i></span>
                 </div>
-                <input type="text" class="form-control bg-transparent" style="border-left: none; box-shadow: none;">
+                <input type="text" class="form-control bg-transparent form-control-no-border-left">
               </div>
             </div>
           </div>
         </div>
 
         <!-- Contenedor del paso 6 -->
-        <div id="pd-step-6" class="pd-step" style="display: none;">
+        <div id="pd-step-6" class="pd-step">
           <p class="text-center mb-3 mt-4">Documentos del aprendiz</p>
-          <div style="border: 1px dashed #6c757d; padding: 25px 20px; border-radius: 5px; margin-bottom: 25px;">
-            <div class="d-flex justify-content-center flex-wrap" style="gap: 15px;">
-              <button type="button" class="btn btn-primary"
-                style="background-color: #2852ff; border-color: #2852ff; border-radius: 8px; padding: 8px 15px;"
+          <div class="box-dashed-large">
+            <div class="d-flex justify-content-center flex-wrap upload-action-group">
+              <button type="button" class="btn btn-primary btn-blue-solid"
                 data-toggle="modal" data-target="#modalSubirArchivo">Documento de identidad</button>
-              <button type="button" class="btn btn-primary"
-                style="background-color: #2852ff; border-color: #2852ff; border-radius: 8px; padding: 8px 15px;"
+              <button type="button" class="btn btn-primary btn-blue-solid"
                 data-toggle="modal" data-target="#modalSubirArchivo">Recibo de servicio publico(Energia, Agua o
                 Gas)</button>
-              <button type="button" class="btn btn-primary"
-                style="background-color: #2852ff; border-color: #2852ff; border-radius: 8px; padding: 8px 15px;"
+              <button type="button" class="btn btn-primary btn-blue-solid"
                 data-toggle="modal" data-target="#modalSubirArchivo">Documento de su EPS</button>
             </div>
           </div>
-          <p class="text-center mb-4" style="color: #dc3545;">¡Documentos del representante en caso del aprendiz ser
+          <p class="text-center mb-4 form-warning-text">¡Documentos del representante en caso del aprendiz ser
             menor de edad!</p>
           <div class="text-center mb-4 pb-2">
-            <button type="button" class="btn btn-primary"
-              style="background-color: #2852ff; border-color: #2852ff; border-radius: 8px; padding: 8px 15px;"
+            <button type="button" class="btn btn-primary btn-blue-solid"
               data-toggle="modal" data-target="#modalSubirArchivo">Documento de identidad</button>
           </div>
         </div>
 
-        <div id="pd-step-7" class="pd-step" style="display: none;">
-          <div style="max-height: 50vh; overflow-y: auto; padding-right: 15px; margin-bottom: 20px;">
+        <div id="pd-step-7" class="pd-step">
+          <div class="scroll-section">
             <?php
             $preguntasPaso7 = [
               ["texto" => "aprendiz embarazada o en periodo de lactancia hasta un (1) año despues del parto y por razones de lactancia?", "color" => "text-danger"],
@@ -1069,14 +1025,12 @@
                   <div class="custom-control custom-radio">
                     <input type="radio" id="p7_<?php echo $index; ?>_si" name="p7_<?php echo $index; ?>"
                       class="custom-control-input">
-                    <label class="custom-control-label" for="p7_<?php echo $index; ?>_si"
-                      style="font-weight: normal;">si</label>
+                    <label class="custom-control-label font-weight-normal" for="p7_<?php echo $index; ?>_si">si</label>
                   </div>
                   <div class="custom-control custom-radio">
                     <input type="radio" id="p7_<?php echo $index; ?>_no" name="p7_<?php echo $index; ?>"
                       class="custom-control-input">
-                    <label class="custom-control-label" for="p7_<?php echo $index; ?>_no"
-                      style="font-weight: normal;">no</label>
+                    <label class="custom-control-label font-weight-normal" for="p7_<?php echo $index; ?>_no">no</label>
                   </div>
                 </div>
               </div>
@@ -1084,8 +1038,8 @@
           </div>
         </div>
 
-        <div id="pd-step-8" class="pd-step" style="display: none;">
-          <div style="max-height: 50vh; overflow-y: auto; padding-right: 15px; margin-bottom: 20px;">
+        <div id="pd-step-8" class="pd-step">
+          <div class="scroll-section">
             <?php
             $preguntasPaso8 = [
               ["texto" => "es aprendiz con sisben nivel grupo a 1,2,3,4,", "color" => ""],
@@ -1108,14 +1062,12 @@
                   <div class="custom-control custom-radio">
                     <input type="radio" id="p8_<?php echo $index; ?>_si" name="p8_<?php echo $index; ?>"
                       class="custom-control-input">
-                    <label class="custom-control-label" for="p8_<?php echo $index; ?>_si"
-                      style="font-weight: normal;">si</label>
+                    <label class="custom-control-label font-weight-normal" for="p8_<?php echo $index; ?>_si">si</label>
                   </div>
                   <div class="custom-control custom-radio">
                     <input type="radio" id="p8_<?php echo $index; ?>_no" name="p8_<?php echo $index; ?>"
                       class="custom-control-input">
-                    <label class="custom-control-label" for="p8_<?php echo $index; ?>_no"
-                      style="font-weight: normal;">no</label>
+                    <label class="custom-control-label font-weight-normal" for="p8_<?php echo $index; ?>_no">no</label>
                   </div>
                 </div>
               </div>
@@ -1126,7 +1078,7 @@
       </div>
       <div class="modal-footer d-flex justify-content-center border-0 pt-0 pb-4">
         <div class="w-100 d-flex justify-content-between align-items-center px-4 flex-wrap">
-          <div class="d-flex mb-2" style="gap: 5px; flex-wrap: wrap;" id="pd-pagination">
+          <div class="d-flex gap-5-flex-wrap mb-2" id="pd-pagination">
             <span class="pd-circle active" data-step="1">1</span>
             <span class="pd-circle" data-step="2">2</span>
             <span class="pd-circle" data-step="3">3</span>
@@ -1137,10 +1089,8 @@
             <span class="pd-circle" data-step="8">8</span>
           </div>
           <div class="d-flex mb-2">
-            <button type="button" class="btn btn-danger mr-2" id="btnPdAnterior"
-              style="border-radius: 8px; padding: 6px 20px;">Cancelar</button>
-            <button type="button" class="btn btn-primary" id="btnPdSiguiente"
-              style="background-color: #2852ff; border-color: #2852ff; border-radius: 8px; padding: 6px 20px;">Siguiente</button>
+            <button type="button" class="btn btn-danger mr-2 btn-pill-md" id="btnPdAnterior">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-blue-solid btn-pill-md" id="btnPdSiguiente">Siguiente</button>
           </div>
         </div>
       </div>
@@ -1151,18 +1101,16 @@
 <!-- Modal Confirmacion Obligaciones -->
 <div class="modal fade" id="modalConfirmacion" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-    <div class="modal-content text-center" style="border-radius: 15px; padding: 20px;">
+    <div class="modal-content text-center modal-content-lg-rounded">
       <div class="modal-body">
-        <i class="fas fa-exclamation-circle mb-3" style="font-size: 2.5rem; color: #fff;"></i>
-        <p style="font-size: 1.1rem; line-height: 1.3;" class="mb-4">
+        <i class="fas fa-exclamation-circle mb-3 icon-notification"></i>
+        <p class="modal-notification-text mb-4">
           conoce las<br>obligaciones que<br>adquiere como<br>aprendiz<br>si es beneficiario
           del<br>apoyo<br>socioeconomico al<br>que<br>se esta postulando?
         </p>
-        <div class="d-flex justify-content-center" style="gap: 15px;">
-          <button type="button" class="btn btn-danger px-4" data-dismiss="modal"
-            style="border-radius: 8px;">Cancelar</button>
-          <button type="button" class="btn btn-primary px-4" id="btnContinuarConfirmacion"
-            style="background-color: #1565c0; border-radius: 8px;" data-dismiss="modal">Continuar</button>
+        <div class="d-flex justify-content-center btn-group-gap">
+          <button type="button" class="btn btn-danger px-4 btn-pill-md" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary px-4 btn-primary-emphasis btn-pill-md" id="btnContinuarConfirmacion" data-dismiss="modal">Continuar</button>
         </div>
       </div>
     </div>
@@ -1172,21 +1120,20 @@
 <!-- Modal Finalizado Exito -->
 <div class="modal fade" id="modalExitoInscripcion" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-    <div class="modal-content text-center" style="border-radius: 15px; padding: 20px;">
+    <div class="modal-content text-center modal-content-lg-rounded">
       <div class="modal-body">
-        <i class="fas fa-exclamation-circle mb-3" style="font-size: 2.5rem; color: #fff;"></i>
-        <p style="font-size: 1.1rem; line-height: 1.3;" class="mb-4">
+        <i class="fas fa-exclamation-circle mb-3 icon-notification"></i>
+        <p class="modal-notification-text mb-4">
           Tu inscripción se<br>completo<br>corectamente. te<br>invitamos a estar al<br>tanto con las<br>notificaciones.
         </p>
-        <button type="button" class="btn btn-primary px-5" id="btnFinalizarTodo"
-          style="background-color: #1565c0; border-radius: 8px;" data-dismiss="modal">Finalizar</button>
+        <button type="button" class="btn btn-primary px-5 btn-primary-emphasis" id="btnFinalizarTodo" data-dismiss="modal">Finalizar</button>
       </div>
     </div>
   </div>
 </div>
 
-<link rel="stylesheet" href="vistas/inscripcion.css/style.css">
-<script src="vistas/js/inscripciones.js"></script>
+<script src="vistas/js/InscripcionesTablaUsuarios.js"></script>
+<script src="vistas/js/InscripcionesTablaAdministrador.js"></script>
 
 
 <!-- /.content -->
