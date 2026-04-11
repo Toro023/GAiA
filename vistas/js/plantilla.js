@@ -54,5 +54,20 @@ $(document).ready(function () {
       .buttons()
       .container()
       .appendTo("#tblDatos_wrapper .col-md-6:eq(0)");
+
+    // Manejo de tabs para los botones de apoyo
+    $(".btn-apoyo").click(function () {
+      // Remover active de todos los botones y agregarlo al actual
+      $(".btn-apoyo").removeClass("active");
+      $(this).addClass("active");
+
+      // Ocultar todos los paneles y mostrar el destino
+      var targetId = $(this).data("target");
+      $(".tab-pane").removeClass("show active");
+      $(targetId).addClass("show active");
+
+      // Recalcular el tamaño de las columnas de DataTables al mostrar la pestaña
+      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust().responsive.recalc();
+    });
   });
 });
