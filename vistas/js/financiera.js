@@ -1,5 +1,5 @@
 
-// 1. Botón Guardar / Aceptar (genérico para varios modales)
+/* // 1. Botón Guardar / Aceptar (genérico para varios modales)
 $(document).on("click", ".btn-accion-guardar", function() {
     $("#modalNotificacionSuccess .modal-body p").html("<strong><i class='fas fa-check'></i> Informacion guardada correctamente</strong>");
     $("#modalNotificacionSuccess").modal("show");
@@ -29,7 +29,7 @@ $(document).on("click", ".btn-reporte-zip", function() {
     $('#modalDescargarReportes').modal('hide');
     $("#modalNotificacionSuccess .modal-body p").html("<strong><i class='fas fa-check'></i> reporte \"aprendices ___.zip\" descargado correctamente</strong>");
     $("#modalNotificacionSuccess").modal("show");
-});
+}); */
 $(document).ready(function () {
     // Configuración base de datatables
     // var tableOptions = {

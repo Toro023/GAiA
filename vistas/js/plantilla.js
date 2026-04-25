@@ -22,7 +22,7 @@ $(document).ready(function () {
       .container()
       .appendTo("#tblSostenimiento_wrapper .col-md-6:eq(0)");
 
-    $("#tblTransporte")
+    /* $("#tblTransporte")
       .DataTable({
         responsive: true,
         lengthChange: false,
@@ -53,6 +53,6 @@ $(document).ready(function () {
       })
       .buttons()
       .container()
-      .appendTo("#tblDatos_wrapper .col-md-6:eq(0)");
+      .appendTo("#tblDatos_wrapper .col-md-6:eq(0)"); */
   });
 });
