@@ -150,6 +150,18 @@
               </tr>
             </thead>
             <tbody>
+              <td>1</td>
+              <td>Sostenimiento regular</td>
+              <td>Se les informa a los aprendices..<strong>ver mas</strong></td>
+              <td>09/25 a 01/26</td>
+              <td class="text-center"><button type="button" class="btn btn-block btn-success">Aprobado</button></td>
+              <td>06/11/2025</td>
+              <td class="text-center"><button class="btn btn-sm btn-outline-info border-0"><i
+              class="fas fa-edit"></i></button>
+              <button class="btn btn-sm btn-outline-info border-0"><i class="fas fa-edit"></i></button>
+              <button class="btn btn-sm btn-outline-info border-0"><i class="fas fa-edit"></i></button>
+            </td>
+            <tr>
             </tbody>
           </table>
         </div>
@@ -169,11 +181,20 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+               <td>1</td>
+                <td>Sostenimiento regular</td>
+                <td>Se les informa a los aprendices..<strong>ver mas</strong></td>
+                <td>09/25 a 01/26</td>
+                <td class="text-center"><button type="button" class="btn btn-block btn-success">Aprobado</button></td>
+                <td>06/11/2025</td>
+                <td class="text-center"><button class="btn btn-sm btn-outline-info border-0"><i
+                      class="fas fa-edit"></i></button>
+                  <button class="btn btn-sm btn-outline-info border-0"><i class="fas fa-edit"></i></button>
+                  <button class="btn btn-sm btn-outline-info border-0"><i class="fas fa-edit"></i></button>
+                </td>
+                </tr>
               <!-- Vacío por ahora -->
-
-
-
-
 
             </tbody>
           </table>
@@ -194,9 +215,20 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+               <td>1</td>
+                <td>Sostenimiento regular</td>
+                <td>Se les informa a los aprendices..<strong>ver mas</strong></td>
+                <td>09/25 a 01/26</td>
+                <td class="text-center"><button type="button" class="btn btn-block btn-success">Aprobado</button></td>
+                <td>06/11/2025</td>
+                <td class="text-center"><button class="btn btn-sm btn-outline-info border-0"><i
+                      class="fas fa-edit"></i></button>
+                  <button class="btn btn-sm btn-outline-info border-0"><i class="fas fa-edit"></i></button>
+                  <button class="btn btn-sm btn-outline-info border-0"><i class="fas fa-edit"></i></button>
+                </td>
+                </tr>
               <!-- Vacío por ahora -->
-
-
             </tbody>
           </table>
         </div>
