@@ -36,7 +36,6 @@
                     <i class="fas fa-car"></i> Apoyo de transporte
                 </button>
 
-
                 <button class="btn btn-success mr-2 mb-2">
                     <i class="fas fa-utensils"></i> Apoyo de alimentación
                 </button>
@@ -50,7 +49,7 @@
             <table id="tblSostenimiento" class="table tbl-GAiA table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>Identificacion</th>
+                        <th>Identificación</th>
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Ficha</th>
@@ -176,7 +175,7 @@
             <table id="tblTransporte" class="table tbl-GAiA table-bordered table-striped" style="display:none">
                 <thead>
                     <tr>
-                        <th>Identificacion</th>
+                        <th>Identificación</th>
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Ficha</th>
@@ -306,7 +305,7 @@
             <table id="tblAlimentacion" class="table tbl-GAiA table-bordered table-striped" style="display:none">
                 <thead>
                     <tr>
-                        <th>Identificacion</th>
+                        <th>Identificación</th>
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Ficha</th>
@@ -434,7 +433,7 @@
             <table id="tblDatos" class="table tbl-GAiA table-bordered table-striped" style="display:none">
                 <thead>
                     <tr>
-                        <th>Identificacion</th>
+                        <th>Identificación</th>
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Ficha</th>
