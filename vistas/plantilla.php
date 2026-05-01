@@ -1,6 +1,6 @@
 <?php
 
-  session_start();
+    session_start();
 
 ?>
 
@@ -59,6 +59,7 @@
     <script src="vistas/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
     <!-- PAGE PLUGINS -->
+
     <!-- jQuery Mapael -->
     <script src="vistas/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="vistas/plugins/raphael/raphael.min.js"></script>
@@ -69,6 +70,11 @@
 
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="vistas/dist/js/pages/dashboard2.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Toastr -->
+    <script src="../../plugins/toastr/toastr.min.js"></script>
 
     <!-- AdminLTE App -->
     <script src="vistas/dist/js/adminlte.js"></script>
@@ -81,53 +87,52 @@
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed login-page">
   <!-- wrapper -->
   <?php
-    if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
+      if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
 
-      echo "<script>
+          echo "<script>
         document.addEventListener('DOMContentLoaded', function () {
           document.body.classList.remove('login-page');
         });
-      
+
       </script>";
-      echo '<div class="wrapper">';
-      include 'modulos/encabezado.php';
-      include 'modulos/menu.php';
-      echo '<div class="content-wrapper">';
+          echo '<div class="wrapper">';
+          include 'modulos/encabezado.php';
+          include 'modulos/menu.php';
+          echo '<div class="content-wrapper">';
 
-      if (isset($_GET["ruta"])) {
-        
-        if (
-          $_GET["ruta"] == "inicio" ||
-          $_GET["ruta"] == "puntuacion" ||
-          $_GET["ruta"] == "apoyos" ||
-          $_GET["ruta"] == "sedes" ||
-          $_GET["ruta"] == "fichas" ||
-          $_GET["ruta"] == "identificacion" ||
-          $_GET["ruta"] == "financiera" ||
-          $_GET["ruta"] == "verificacion" ||
-          $_GET["ruta"] == "reportes" ||
-          $_GET["ruta"] == "inscripciones" ||
-          $_GET["ruta"] == "Usuarios" ||
-          $_GET["ruta"] == "Salir"
+          if (isset($_GET["ruta"])) {
 
-        ) {
-          include "modulos/" . $_GET["ruta"] . ".php";
-        } //fin de lista blanca
-        else {
-          include "modulos/error404.php";
-        } // si la ruta no existe
+              if (
+            $_GET["ruta"] == "inicio" ||
+            $_GET["ruta"] == "puntuacion" ||
+            $_GET["ruta"] == "apoyos" ||
+            $_GET["ruta"] == "sedes" ||
+            $_GET["ruta"] == "fichas" ||
+            $_GET["ruta"] == "identificacion" ||
+            $_GET["ruta"] == "financiera" ||
+            $_GET["ruta"] == "verificacion" ||
+            $_GET["ruta"] == "reportes" ||
+            $_GET["ruta"] == "inscripciones" ||
+            $_GET["ruta"] == "Usuarios" ||
+            $_GET["ruta"] == "Salir"
 
+              ) {
+            include "modulos/" . $_GET["ruta"] . ".php";
+              } //fin de lista blanca
+              else {
+            include "modulos/error404.php";
+              } // si la ruta no existe
+
+          }
+          // cerrando el content wrapper
+          echo "</div>";
+          include 'modulos/footer.php';
+          echo "</div>";
+      } else {
+          include "modulos/login.php";
       }
-      // cerrando el content wrapper
-      echo "</div>";
-      include 'modulos/footer.php';
-      echo "</div>";
-    } else {
-      include "modulos/login.php";
-    }
 
-
-    ?>
+  ?>
 
 
 
